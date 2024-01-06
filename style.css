@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.maincont{
+    display: grid;
+    grid-template-columns:repeat(5,100vw);
+}
+.marioRunning{
+    position: absolute;
+    width:100%;
+    aspect-ratio: 1;
+    border: 1px solid wheat;
+    position: absolute;
+    bottom:0px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    transition: all 1.5s linear;
+}
+.marioRunning img {
+    position:relative;
+    width: 110px;
+    margin-left:100px;
+    margin-bottom: 32px;
+    aspect-ratio: 1;
+}
+.marioRunning:active{
+        padding-bottom: 300px; 
+}
+.mainCloud{
+    display: grid;
+    grid-template-columns:repeat(5,100vw) ;
+}
+.cloud {
+    position: absolute;
+    background-image: url(cloud.png);
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    border-radius: 25px;
+}
+
+.cloud1 {
+    transform: translate(5vw, 5vh);
+    width: 20vw;
+    aspect-ratio: 2;
+}
+
+.cloud2 {
+    transform: translate(77vw, 13vh);
+    width: 20vw;
+    aspect-ratio: 2;
+}
+
+.cloud3 {
+    transform: translate(55vw, 34vh);
+    width: 10vw;
+    aspect-ratio: 2;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(MarioBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation-name: animate;
+    animation-duration:5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes animate {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100%, 0);
+    }
+}
+
+.clouds {
+    position: relative;
+    width: 100%;
+    height: 55.76vh;
+    /* border: 1px solid red; */
+    animation-name: animateClouds;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes animateClouds {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100%, 0);
+    }
+}
